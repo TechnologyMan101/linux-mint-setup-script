@@ -4,7 +4,7 @@ Bash Script to Set Up a Fresh Install of Linux Mint 20 and above.
 
 # Documentation
 
-Version 2.0
+Version 2.1
 
 Supported Linux Mint Versions: 20
 
