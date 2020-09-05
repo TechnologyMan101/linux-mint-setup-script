@@ -3,9 +3,9 @@ while true
 do
 	clear # clear screen for each loop of menu
  	tput setaf 3
-	echo "====================================="
-	echo " --- Linux Mint Setup Script 2.4 ---"
-	echo "====================================="
+	echo "======================================="
+	echo " --- Linux Mint Setup Script 2.4.1 ---"
+	echo "======================================="
 	echo "Supported Linux Mint Versions: 20"
 	tput setaf 2; echo "Script created by Nathan Viroonchatapan."
 	tput setaf 2; echo "All due credit and respect to Tyler Broad, for his work on the Release 2 codebase."
