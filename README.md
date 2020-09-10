@@ -1,12 +1,12 @@
 # linux-mint-setup-script
-Bash Script to Set Up a Fresh Install of Linux Mint 20 and above.
+Bash Script to Set Up a Fresh Install of Linux Mint 20.x and above.
 
 
 # Documentation
 
-Version 2.6
+Version 2.6.1
 
-Supported Linux Mint Versions: 20
+Supported Linux Mint Versions: 20.x
 
 Please install .deb files and files using other types of installation formats using files manually.
 
