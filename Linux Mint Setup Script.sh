@@ -54,7 +54,7 @@ minimal () {
 	clear
 	tput sgr0
 	sudo apt update -y
-	sudo apt install -y ubuntu-restricted-extras synaptic pavucontrol rhythmbox rhythmbox-plugin-alternative-toolbar gparted p7zip-full p7zip-rar gnome-tweaks gpart network-manager-openvpn-gnome ffmpeg gufw dconf-editor deja-dup fonts-cantarell numlockx gnome-firmware
+	sudo apt install -y ubuntu-restricted-extras synaptic pavucontrol rhythmbox rhythmbox-plugin-alternative-toolbar gparted p7zip-full p7zip-rar gpart network-manager-openvpn-gnome ffmpeg gufw dconf-editor deja-dup fonts-cantarell numlockx gnome-firmware
 	sudo apt install -y gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-plugins-good libavcodec-extra gstreamer1.0-libav chromium-codecs-ffmpeg-extra libdvd-pkg
 	sudo dpkg-reconfigure libdvd-pkg
 	sudo dpkg --add-architecture i386
@@ -71,7 +71,7 @@ do
 	clear
  	tput setaf 3
 	echo "====================================="
-	echo " --- Linux Mint Setup Script 3.0 ---"
+	echo " --- Linux Mint Setup Script 3.1 ---"
 	echo "====================================="
 	echo "Supported Linux Mint Versions: 20.x"
 	tput setaf 2
