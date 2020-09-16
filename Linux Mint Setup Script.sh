@@ -1,7 +1,9 @@
 #!/bin/bash
 finish () {
 	clear
-	tput setaf 1
+	tput setaf 10
+	echo "Done..."
+	tput setaf 9
 	echo "Rebooting..."
 	sleep 3
 	sudo reboot
@@ -71,20 +73,21 @@ do
 	clear
  	tput setaf 3
 	echo "====================================="
-	echo " --- Linux Mint Setup Script 3.1 ---"
+	echo " --- Linux Mint Setup Script 3.2 ---"
 	echo "====================================="
 	echo "Supported Linux Mint Versions: 20.x"
-	tput setaf 2
+	echo "Script may prompt you or ask you for your password once in a while. Please monitor your computer until the script is done."
+	tput setaf 10
 	echo "Script created by Nathan Viroonchatapan."
 	tput setaf 3
 	echo "You can open this script in a text editor to see packages to be installed in detail."
 	echo "Press 1 to install all packages in the script (Full Install/All User Packages)"
 	echo "Press 2 to install only the base packages in the script (Minimal Install/Essentials)"
-	tput setaf 1
+	tput setaf 9
 	echo "Press Q to quit"
 	tput setaf 3
 	echo "Enter your selection here and hit <return>..."
-	tput setaf 1
+	tput setaf 9
 	echo "System will automatically reboot after the script is run!!!"
 	echo "It is not recommended to run this script more than once!!!"
 	tput sgr0
@@ -95,10 +98,4 @@ do
 		q) exit;;
 		Q) exit;;
 	esac
-	clear
-	tput setaf 3
-	echo "Hit the <return> key to finish..."
-	tput sgr0
-	read answer
-	exit
 done
