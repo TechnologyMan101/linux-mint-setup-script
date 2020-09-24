@@ -1,4 +1,13 @@
 #!/bin/bash
+badoption () {
+	clear
+	tput setaf 9
+	echo "Invalid Option!"
+	tput setaf 3
+	echo "Returning to Main Menu..."
+	tput sgr0
+	sleep 3
+}
 finish () {
 	clear
 	tput setaf 10
@@ -8,15 +17,7 @@ finish () {
 	sleep 3
 	sudo reboot
 }
-full () {
-	clear
-	tput setaf 3
-	echo "Full Install/All User Packages..."
-	sleep 3
-	clear
-	tput sgr0
-	sudo apt update -y
-	sudo apt install -y ubuntu-restricted-extras synaptic remmina bleachbit frozen-bubble musescore3 asunder brasero k3b pavucontrol pulseeffects rhythmbox rhythmbox-plugin-alternative-toolbar shotwell solaar gparted vlc p7zip-full p7zip-rar lame gpart speedtest-cli neofetch ffmpeg httraqt lsp-plugins tree audacity telegram-desktop easytag android-tools-adb android-tools-fastboot gnome-sound-recorder cheese nikwi supertux dconf-editor deja-dup gnome-todo pitivi fonts-cantarell gnome-books numlockx gnome-firmware gnome-weather krita gnome-clocks gimp
+fullcommon () {
 	sudo apt install -y gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-plugins-good libavcodec-extra gstreamer1.0-libav chromium-codecs-ffmpeg-extra libdvd-pkg
 	sudo dpkg-reconfigure libdvd-pkg
 	sudo dpkg --add-architecture i386
@@ -48,15 +49,7 @@ full () {
 	sudo apt autoclean -y
 	finish
 }
-minimal () {
-	clear
-	tput setaf 3
-	echo "Minimal Install/Essentials..."
-	sleep 3
-	clear
-	tput sgr0
-	sudo apt update -y
-	sudo apt install -y ubuntu-restricted-extras synaptic pavucontrol rhythmbox rhythmbox-plugin-alternative-toolbar gparted p7zip-full p7zip-rar gpart network-manager-openvpn-gnome ffmpeg gufw dconf-editor deja-dup fonts-cantarell numlockx gnome-firmware
+minimalcommon () {
 	sudo apt install -y gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-plugins-good libavcodec-extra gstreamer1.0-libav chromium-codecs-ffmpeg-extra libdvd-pkg
 	sudo dpkg-reconfigure libdvd-pkg
 	sudo dpkg --add-architecture i386
@@ -68,12 +61,56 @@ minimal () {
 	sudo apt autoclean -y
 	finish
 }
+full () {
+	clear
+	tput setaf 3
+	echo "Full Install/All User Packages (Cinnamon)..."
+	sleep 3
+	clear
+	tput sgr0
+	sudo apt update -y
+	sudo apt install -y ubuntu-restricted-extras synaptic remmina bleachbit frozen-bubble musescore3 asunder brasero k3b pavucontrol pulseeffects rhythmbox rhythmbox-plugin-alternative-toolbar shotwell solaar gparted vlc p7zip-full p7zip-rar lame gpart speedtest-cli neofetch ffmpeg httraqt lsp-plugins tree audacity telegram-desktop easytag android-tools-adb android-tools-fastboot gnome-sound-recorder cheese nikwi supertux dconf-editor deja-dup gnome-todo pitivi fonts-cantarell gnome-books numlockx gnome-firmware gnome-weather krita gnome-clocks gimp htop nemo-image-converter nemo-media-columns nemo-audio-tab nemo-seahorse transmission
+	fullcommon
+}
+minimal () {
+	clear
+	tput setaf 3
+	echo "Minimal Install/Essentials (Cinnamon)..."
+	sleep 3
+	clear
+	tput sgr0
+	sudo apt update -y
+	sudo apt install -y ubuntu-restricted-extras synaptic pavucontrol rhythmbox rhythmbox-plugin-alternative-toolbar gparted p7zip-full p7zip-rar gpart network-manager-openvpn-gnome ffmpeg gufw dconf-editor deja-dup fonts-cantarell numlockx gnome-firmware htop nemo-image-converter nemo-media-columns nemo-audio-tab nemo-seahorse
+	minimalcommon
+}
+fullalt () {
+	clear
+	tput setaf 3
+	echo "Full Install/All User Packages (Other DEs)..."
+	sleep 3
+	clear
+	tput sgr0
+	sudo apt update -y
+	sudo apt install -y ubuntu-restricted-extras synaptic remmina bleachbit frozen-bubble musescore3 asunder brasero k3b pavucontrol pulseeffects rhythmbox rhythmbox-plugin-alternative-toolbar shotwell solaar gparted vlc p7zip-full p7zip-rar lame gpart speedtest-cli neofetch ffmpeg httraqt lsp-plugins tree audacity telegram-desktop easytag android-tools-adb android-tools-fastboot gnome-sound-recorder cheese nikwi supertux dconf-editor deja-dup gnome-todo pitivi fonts-cantarell gnome-books numlockx gnome-firmware gnome-weather krita gnome-clocks gimp htop transmission
+	fullcommon
+}
+minimalalt () {
+	clear
+	tput setaf 3
+	echo "Minimal Install/Essentials (Other DEs)..."
+	sleep 3
+	clear
+	tput sgr0
+	sudo apt update -y
+	sudo apt install -y ubuntu-restricted-extras synaptic pavucontrol rhythmbox rhythmbox-plugin-alternative-toolbar gparted p7zip-full p7zip-rar gpart network-manager-openvpn-gnome ffmpeg gufw dconf-editor deja-dup fonts-cantarell numlockx gnome-firmware htop
+	minimalcommon
+}
 while true
 do
 	clear
  	tput setaf 3
 	echo "====================================="
-	echo " --- Linux Mint Setup Script 3.2 ---"
+	echo " --- Linux Mint Setup Script 3.3 ---"
 	echo "====================================="
 	echo "Supported Linux Mint Versions: 20.x"
 	echo "Script may prompt you or ask you for your password once in a while. Please monitor your computer until the script is done."
@@ -81,21 +118,26 @@ do
 	echo "Script created by Nathan Viroonchatapan."
 	tput setaf 3
 	echo "You can open this script in a text editor to see packages to be installed in detail."
-	echo "Press 1 to install all packages in the script (Full Install/All User Packages)"
-	echo "Press 2 to install only the base packages in the script (Minimal Install/Essentials)"
-	tput setaf 9
-	echo "Press Q to quit"
-	tput setaf 3
-	echo "Enter your selection here and hit <return>..."
 	tput setaf 9
 	echo "System will automatically reboot after the script is run!!!"
 	echo "It is not recommended to run this script more than once!!!"
+	tput setaf 3
+	echo "Press 1 to perform a Full Install (All User Packages) (Cinnamon)"
+	echo "Press 2 to perform a Minimal Install (Essentials) (Cinnamon)"
+	echo "Press 3 to perform a Full Install (All User Packages) (Other DEs)"
+	echo "Press 4 to perform a Minimal Install (Essentials) (Other DEs)"
+	tput setaf 9
+	echo "Press Q to quit"
 	tput sgr0
+	echo "Enter your selection followed by <return>:"
 	read answer
 	case "$answer" in
 		1) full;;
 		2) minimal;;
+		3) fullalt;;
+		4) minimalalt;;
 		q) exit;;
 		Q) exit;;
 	esac
+	badoption
 done
