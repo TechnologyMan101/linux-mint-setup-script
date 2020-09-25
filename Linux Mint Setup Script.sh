@@ -1,4 +1,91 @@
 #!/bin/bash
+# Start of Function Cluster
+mainmenu () {
+	clear
+ 	tput setaf 3
+	echo "====================================="
+	echo " --- Linux Mint Setup Script 3.4 ---"
+	echo "====================================="
+	echo "Supported Linux Mint Versions: 20.x"
+	echo "Script may prompt you or ask you for your password once in a while. Please monitor your computer until the script is done."
+	tput setaf 10
+	echo "Script created by Nathan Viroonchatapan."
+	tput setaf 3
+	echo "You can open this script in a text editor to see packages to be installed in detail."
+	tput setaf 9
+	echo "System will automatically reboot after the script is run!!!"
+	echo "It is not recommended to run this script more than once!!!"
+	tput setaf 3
+	echo "Press 1 to perform a Full Install (All User Packages)"
+	echo "Press 2 to perform a Minimal Install (Essentials)"
+	tput setaf 9
+	echo "Press Q to quit"
+	tput sgr0
+	echo "Enter your selection followed by <return>:"
+	read answer
+	case "$answer" in
+		1) menu1;;
+		2) menu2;;
+		q) quitscript;;
+		Q) quitscript;;
+	esac
+	badoption
+}
+menu1 () {
+	clear
+	tput setaf 3
+	echo "==============================="
+	echo " --- Full Install Options ---"
+	echo "==============================="
+	echo "Choose the option appropiate for your configuration."
+	echo "Press 1 to select the script for Cinnamon."
+	echo "Press 2 to select the script for Other DEs."
+	tput setaf 9
+	echo "Press Q to go back to Main Menu."
+	tput sgr0
+	echo "Enter your selection followed by <return>:"
+	read answer
+	case "$answer" in
+		1) full;;
+		2) fullalt;;
+		q) returntomain;;
+		Q) returntomain;;
+	esac
+}
+menu2 () {
+	clear
+	tput setaf 3
+	echo "================================="
+	echo " --- Minimal Install Options ---"
+	echo "================================="
+	echo "Choose the option appropiate for your configuration."
+	echo "Press 1 to select the script for Cinnamon."
+	echo "Press 2 to select the script for Other DEs."
+	tput setaf 9
+	echo "Press Q to go back to Main Menu."
+	tput sgr0
+	echo "Enter your selection followed by <return>:"
+	read answer
+	case "$answer" in
+		1) minimal;;
+		2) minimalalt;;
+		q) returntomain;;
+		Q) returntomain;;
+	esac
+}
+returntomain () {
+	clear
+	tput setaf 3
+	echo "Returning to Main Menu..."
+	tput sgr0
+	sleep 3
+	mainmenu
+}
+quitscript () {
+	tput sgr0
+	clear
+	exit
+}
 badoption () {
 	clear
 	tput setaf 9
@@ -14,7 +101,9 @@ finish () {
 	echo "Done..."
 	tput setaf 9
 	echo "Rebooting..."
+	tput sgr0
 	sleep 3
+	clear
 	sudo reboot
 }
 fullcommon () {
@@ -65,9 +154,9 @@ full () {
 	clear
 	tput setaf 3
 	echo "Full Install/All User Packages (Cinnamon)..."
+	tput sgr0
 	sleep 3
 	clear
-	tput sgr0
 	sudo apt update -y
 	sudo apt install -y ubuntu-restricted-extras synaptic remmina bleachbit frozen-bubble musescore3 asunder brasero k3b pavucontrol pulseeffects rhythmbox rhythmbox-plugin-alternative-toolbar shotwell solaar gparted vlc p7zip-full p7zip-rar lame gpart speedtest-cli neofetch ffmpeg httraqt lsp-plugins tree audacity telegram-desktop easytag android-tools-adb android-tools-fastboot gnome-sound-recorder cheese nikwi supertux dconf-editor deja-dup gnome-todo pitivi fonts-cantarell gnome-books numlockx gnome-firmware gnome-weather krita gnome-clocks gimp htop nemo-image-converter nemo-media-columns nemo-audio-tab nemo-seahorse transmission
 	fullcommon
@@ -76,9 +165,9 @@ minimal () {
 	clear
 	tput setaf 3
 	echo "Minimal Install/Essentials (Cinnamon)..."
+	tput sgr0
 	sleep 3
 	clear
-	tput sgr0
 	sudo apt update -y
 	sudo apt install -y ubuntu-restricted-extras synaptic pavucontrol rhythmbox rhythmbox-plugin-alternative-toolbar gparted p7zip-full p7zip-rar gpart network-manager-openvpn-gnome ffmpeg gufw dconf-editor deja-dup fonts-cantarell numlockx gnome-firmware htop nemo-image-converter nemo-media-columns nemo-audio-tab nemo-seahorse
 	minimalcommon
@@ -87,9 +176,9 @@ fullalt () {
 	clear
 	tput setaf 3
 	echo "Full Install/All User Packages (Other DEs)..."
+	tput sgr0
 	sleep 3
 	clear
-	tput sgr0
 	sudo apt update -y
 	sudo apt install -y ubuntu-restricted-extras synaptic remmina bleachbit frozen-bubble musescore3 asunder brasero k3b pavucontrol pulseeffects rhythmbox rhythmbox-plugin-alternative-toolbar shotwell solaar gparted vlc p7zip-full p7zip-rar lame gpart speedtest-cli neofetch ffmpeg httraqt lsp-plugins tree audacity telegram-desktop easytag android-tools-adb android-tools-fastboot gnome-sound-recorder cheese nikwi supertux dconf-editor deja-dup gnome-todo pitivi fonts-cantarell gnome-books numlockx gnome-firmware gnome-weather krita gnome-clocks gimp htop transmission
 	fullcommon
@@ -98,46 +187,17 @@ minimalalt () {
 	clear
 	tput setaf 3
 	echo "Minimal Install/Essentials (Other DEs)..."
+	tput sgr0
 	sleep 3
 	clear
-	tput sgr0
 	sudo apt update -y
 	sudo apt install -y ubuntu-restricted-extras synaptic pavucontrol rhythmbox rhythmbox-plugin-alternative-toolbar gparted p7zip-full p7zip-rar gpart network-manager-openvpn-gnome ffmpeg gufw dconf-editor deja-dup fonts-cantarell numlockx gnome-firmware htop
 	minimalcommon
 }
+# End of Function Cluster
+# Start of Main Script
 while true
 do
-	clear
- 	tput setaf 3
-	echo "====================================="
-	echo " --- Linux Mint Setup Script 3.3 ---"
-	echo "====================================="
-	echo "Supported Linux Mint Versions: 20.x"
-	echo "Script may prompt you or ask you for your password once in a while. Please monitor your computer until the script is done."
-	tput setaf 10
-	echo "Script created by Nathan Viroonchatapan."
-	tput setaf 3
-	echo "You can open this script in a text editor to see packages to be installed in detail."
-	tput setaf 9
-	echo "System will automatically reboot after the script is run!!!"
-	echo "It is not recommended to run this script more than once!!!"
-	tput setaf 3
-	echo "Press 1 to perform a Full Install (All User Packages) (Cinnamon)"
-	echo "Press 2 to perform a Minimal Install (Essentials) (Cinnamon)"
-	echo "Press 3 to perform a Full Install (All User Packages) (Other DEs)"
-	echo "Press 4 to perform a Minimal Install (Essentials) (Other DEs)"
-	tput setaf 9
-	echo "Press Q to quit"
-	tput sgr0
-	echo "Enter your selection followed by <return>:"
-	read answer
-	case "$answer" in
-		1) full;;
-		2) minimal;;
-		3) fullalt;;
-		4) minimalalt;;
-		q) exit;;
-		Q) exit;;
-	esac
-	badoption
+	mainmenu
 done
+# End of Main Script
