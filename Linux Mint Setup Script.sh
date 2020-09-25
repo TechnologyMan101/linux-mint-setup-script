@@ -4,7 +4,7 @@ mainmenu () {
 	clear
  	tput setaf 3
 	echo "======================================="
-	echo " --- Linux Mint Setup Script 3.4.2 ---"
+	echo " --- Linux Mint Setup Script 3.4.3 ---"
 	echo "======================================="
 	echo "Supported Linux Mint Versions: 20.x"
 	echo "Script may prompt you or ask you for your password once in a while. Please monitor your computer until the script is done."
@@ -52,6 +52,7 @@ menu1 () {
 		q) returntomain;;
 		Q) returntomain;;
 	esac
+	badoption2
 }
 menu2 () {
 	clear
@@ -73,6 +74,7 @@ menu2 () {
 		q) returntomain;;
 		Q) returntomain;;
 	esac
+	badoption3
 }
 returntomain () {
 	clear
@@ -93,6 +95,26 @@ badoption () {
 	tput sgr0
 	sleep 3
 	mainmenu
+}
+badoption2 () {
+	clear
+	tput setaf 9
+	echo "Invalid Option!"
+	tput setaf 3
+	echo "Returning to Full Install Options..."
+	tput sgr0
+	sleep 3
+	menu1
+}
+badoption3 () {
+	clear
+	tput setaf 9
+	echo "Invalid Option!"
+	tput setaf 3
+	echo "Returning to Minimal Install Options..."
+	tput sgr0
+	sleep 3
+	menu2
 }
 finish () {
 	clear
