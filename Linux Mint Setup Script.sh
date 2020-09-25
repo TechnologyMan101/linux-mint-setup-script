@@ -4,7 +4,7 @@ mainmenu () {
 	clear
  	tput setaf 3
 	echo "======================================="
-	echo " --- Linux Mint Setup Script 3.4.1 ---"
+	echo " --- Linux Mint Setup Script 3.4.2 ---"
 	echo "======================================="
 	echo "Supported Linux Mint Versions: 20.x"
 	echo "Script may prompt you or ask you for your password once in a while. Please monitor your computer until the script is done."
@@ -76,10 +76,7 @@ menu2 () {
 }
 returntomain () {
 	clear
-	tput setaf 3
-	echo "Returning to Main Menu..."
 	tput sgr0
-	sleep 3
 	mainmenu
 }
 quitscript () {
@@ -95,6 +92,7 @@ badoption () {
 	echo "Returning to Main Menu..."
 	tput sgr0
 	sleep 3
+	mainmenu
 }
 finish () {
 	clear
