@@ -4,7 +4,7 @@ Bash Script to Set Up a Fresh Install of Linux Mint 20.x and above.
 
 # Documentation
 
-Version 3.3
+Version 3.4
 
 Supported Linux Mint Versions: 20.x
 
@@ -14,7 +14,7 @@ Please install .deb files and files using other types of installation formats us
 
 Please copy the TTF Essential Font Pack from Extras at https://mega.nz/folder/cRZTkAJD#dV8CG6th0a-10Fu6yCG-5Q into `/usr/share/fonts/` Open the file manager as root. This is required to perform these actions as this is modifying files on the system level.
 
-Please add yourself to `vboxusers` using `sudo usermod -a -G vboxusers $USER` and then reboot. Only do this if you have VirtualBox installed.
+Please add yourself to `vboxusers` using `sudo usermod -aG vboxusers $USER` and then reboot. Only do this if you have VirtualBox installed.
 
 Add `rfkill block bluetooth` to Startup Applications if you want to disable Bluetooth on startup. Only use this if you want Bluetooth to always be disabled on startup.
 
