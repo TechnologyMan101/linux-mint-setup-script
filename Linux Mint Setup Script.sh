@@ -3,9 +3,9 @@
 mainmenu () {
 	clear
  	tput setaf 3
-	echo "====================================="
-	echo " --- Linux Mint Setup Script 3.5 ---"
-	echo "====================================="
+	echo "======================================="
+	echo " --- Linux Mint Setup Script 3.5.1 ---"
+	echo "======================================="
 	echo "Supported Linux Mint Versions: 20.x"
 	echo "Script may prompt you or ask you for your password once in a while. Please monitor your computer until the script is done."
 	tput setaf 10
