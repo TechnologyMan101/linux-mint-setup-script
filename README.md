@@ -4,11 +4,13 @@ Bash Script to Set Up a Fresh Install of Linux Mint 20.x and above.
 
 # Documentation
 
-Version 3.5
+Version 3.5.1
 
 Supported Linux Mint Versions: 20.x
 
 **Please Run Script After Following Instructions Here**
+
+**The Extras folder also contains other tools you may want including font packs.**
 
 Please install .deb files and files using other types of installation formats using files manually (if you have them).
 
