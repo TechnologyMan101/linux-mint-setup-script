@@ -3,13 +3,11 @@
 mainmenu () {
 	clear
  	tput setaf 3
-	echo "======================================="
-	echo " --- Linux Mint Setup Script 3.5.1 ---"
-	echo "======================================="
+	echo "====================================="
+	echo " --- Linux Mint Setup Script 3.6 ---"
+	echo "====================================="
 	echo "Supported Linux Mint Versions: 20.x"
 	echo "Script may prompt you or ask you for your password once in a while. Please monitor your computer until the script is done."
-	tput setaf 10
-	echo "Script created by Nathan Viroonchatapan."
 	tput setaf 3
 	echo "You can open this script in a text editor to see packages to be installed in detail."
 	tput setaf 9
@@ -179,7 +177,7 @@ full () {
 	sleep 3
 	clear
 	sudo apt update -y
-	sudo apt install -y ubuntu-restricted-extras synaptic remmina bleachbit frozen-bubble musescore3 asunder brasero k3b pavucontrol pulseeffects rhythmbox rhythmbox-plugin-alternative-toolbar shotwell solaar gparted vlc p7zip-full p7zip-rar lame gpart speedtest-cli neofetch ffmpeg httraqt lsp-plugins tree audacity telegram-desktop easytag android-tools-adb android-tools-fastboot gnome-sound-recorder cheese nikwi supertux dconf-editor deja-dup gnome-todo pitivi fonts-cantarell gnome-books numlockx gnome-firmware gnome-weather krita gnome-clocks gimp htop nemo-image-converter nemo-media-columns nemo-audio-tab nemo-seahorse transmission curl git
+	sudo apt install -y ubuntu-restricted-extras synaptic remmina bleachbit frozen-bubble musescore3 asunder brasero k3b pavucontrol pulseeffects rhythmbox rhythmbox-plugin-alternative-toolbar shotwell solaar gparted vlc p7zip-full p7zip-rar lame gpart speedtest-cli neofetch ffmpeg httraqt lsp-plugins tree audacity telegram-desktop easytag android-tools-adb android-tools-fastboot gnome-sound-recorder cheese nikwi supertux dconf-editor deja-dup gnome-todo pitivi fonts-cantarell gnome-books numlockx gnome-firmware gnome-weather krita gnome-clocks gimp htop nemo-image-converter nemo-media-columns nemo-audio-tab nemo-seahorse transmission curl git handbrake
 	fullcommon
 }
 minimal () {
@@ -201,7 +199,7 @@ fullalt () {
 	sleep 3
 	clear
 	sudo apt update -y
-	sudo apt install -y ubuntu-restricted-extras synaptic remmina bleachbit frozen-bubble musescore3 asunder brasero k3b pavucontrol pulseeffects rhythmbox rhythmbox-plugin-alternative-toolbar shotwell solaar gparted vlc p7zip-full p7zip-rar lame gpart speedtest-cli neofetch ffmpeg httraqt lsp-plugins tree audacity telegram-desktop easytag android-tools-adb android-tools-fastboot gnome-sound-recorder cheese nikwi supertux dconf-editor deja-dup gnome-todo pitivi fonts-cantarell gnome-books numlockx gnome-firmware gnome-weather krita gnome-clocks gimp htop transmission curl git
+	sudo apt install -y ubuntu-restricted-extras synaptic remmina bleachbit frozen-bubble musescore3 asunder brasero k3b pavucontrol pulseeffects rhythmbox rhythmbox-plugin-alternative-toolbar shotwell solaar gparted vlc p7zip-full p7zip-rar lame gpart speedtest-cli neofetch ffmpeg httraqt lsp-plugins tree audacity telegram-desktop easytag android-tools-adb android-tools-fastboot gnome-sound-recorder cheese nikwi supertux dconf-editor deja-dup gnome-todo pitivi fonts-cantarell gnome-books numlockx gnome-firmware gnome-weather krita gnome-clocks gimp htop transmission curl git handbrake
 	fullcommon
 }
 minimalalt () {
