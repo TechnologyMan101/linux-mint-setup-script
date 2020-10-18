@@ -2,6 +2,9 @@
 Bash Script to Set Up a Fresh Install of Linux Mint 20.x and above.
 
 
+# This script is now being retired due to lack of use and testing, and maintenance issues. This script will no longer be maintained.
+
+
 # Documentation
 
 Version 3.6
