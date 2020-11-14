@@ -1,8 +1,5 @@
 # linux-mint-setup-script
-Bash Script to Set Up a Fresh Install of Linux Mint 20.x and above.
-
-
-# This script is now being retired due to lack of use and testing, and maintenance issues. This script will no longer be maintained.
+Bash script to set up a fresh install of Linux Mint.
 
 
 # Documentation
