@@ -1,4 +1,4 @@
-# linux-mint-setup-script
+# Linux Mint Setup Script
 Bash script to set up a fresh install of Linux Mint.
 
 
