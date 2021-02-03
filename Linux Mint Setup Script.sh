@@ -3,9 +3,9 @@
 mainmenu () {
 	clear
  	tput setaf 3
-	echo "====================================="
-	echo " --- Linux Mint Setup Script 3.9 ---"
-	echo "====================================="
+	echo "======================================"
+	echo " --- Linux Mint Setup Script 3.10 ---"
+	echo "======================================"
 	echo "Supported Linux Mint Versions: 20.x"
 	echo "Script may prompt you or ask you for your password once in a while. Please monitor your computer until the script is done."
 	echo "This script will show terminal output. This is normal."
@@ -158,7 +158,7 @@ full () {
 	sudo apt update -y
 	sudo apt install -y spotify-client
 	sudo apt update -y
-	sudo apt full-upgrade -y
+	sudo apt full-upgrade -y --allow-downgrades
 	sudo apt autoremove -y --purge
 	sudo apt autoclean -y
 	echo "Adding current user to cdrom group..."
@@ -180,7 +180,7 @@ minimal () {
 	sudo apt update -y
 	sudo apt install -y libc6-i386 libx11-6:i386 libegl1-mesa:i386 zlib1g:i386 libstdc++6:i386 libgl1-mesa-dri:i386 libasound2:i386 libpulse0:i386
 	sudo apt update -y
-	sudo apt full-upgrade -y
+	sudo apt full-upgrade -y --allow-downgrades
 	sudo apt autoremove -y --purge
 	sudo apt autoclean -y
 	finish
@@ -216,7 +216,7 @@ fullalt () {
 	sudo apt update -y
 	sudo apt install -y spotify-client
 	sudo apt update -y
-	sudo apt full-upgrade -y
+	sudo apt full-upgrade -y --allow-downgrades
 	sudo apt autoremove -y --purge
 	sudo apt autoclean -y
 	echo "Adding current user to cdrom group..."
@@ -238,7 +238,7 @@ minimalalt () {
 	sudo apt update -y
 	sudo apt install -y libc6-i386 libx11-6:i386 libegl1-mesa:i386 zlib1g:i386 libstdc++6:i386 libgl1-mesa-dri:i386 libasound2:i386 libpulse0:i386
 	sudo apt update -y
-	sudo apt full-upgrade -y
+	sudo apt full-upgrade -y --allow-downgrades
 	sudo apt autoremove -y --purge
 	sudo apt autoclean -y
 	finish
