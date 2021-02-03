@@ -4,7 +4,7 @@ Bash script to set up a fresh install of Linux Mint.
 
 # Documentation
 
-Version 3.9
+Version 3.10
 
 Supported Linux Mint Versions: 20.x
 
